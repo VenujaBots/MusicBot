@@ -46,7 +46,7 @@ Jebot = Client(
 @Jebot.on_message(filters.private & ~filters.bot & ~filters.command("help") & ~filters.command("start") & ~filters.command("s"))
 async def song(client, message):
  #ImJanindu #JEBotZ
-    cap = "@JEBotZ"
+    cap = "@Venuja_sadew"
     url = message.text
     rkp = await message.reply("Processing...")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -215,7 +215,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm a Song Downloader Bot. A bot by @JEBotZ.
+               text="""<b>Hey There, I'm a Song Downloader Bot. A bot by @Venuja_Sadew.
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -223,7 +223,7 @@ Hit help button to find out more about how to use me</b>""",
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/Infinity_BOTs")
+                                            "Channel", url="https://t.me/vndsongbot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -252,9 +252,9 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Send a song name to download song
+               text="""<b>Send a song name to download song (eg:/song)
 
-@JEBotZ</b>""",
+@Venuja_Sadew</b>""",
             reply_to_message_id=message.message_id
         )
     else:
@@ -276,7 +276,7 @@ print(
     """
 Bot Started!
 
-Join @Infinity_BOTs
+Join @vndsongbot
 """
 )
 
